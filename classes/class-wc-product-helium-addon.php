@@ -71,7 +71,7 @@ class WC_Product_Helium_Addon
 	{
 		$this->helium_addon_enabled         = get_option('product_helium_addon_enabled');
 		$this->helium_addon_cost            = get_option('product_helium_addon_cost', 0);
-		$this->helium_addon_weight          = get_option('product_helium_addon_weight', 0);
+		$this->helium_addon_weight          = get_option('product_helium_addon_weight');
 		$this->product_helium_addon_message = get_option('product_helium_addon_message');
 	}
 
