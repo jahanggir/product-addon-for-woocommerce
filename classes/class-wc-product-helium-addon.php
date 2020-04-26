@@ -468,6 +468,13 @@ class WC_Product_Helium_Addon
 				'desc_tip'  => true,
 			),
 			array(
+				'name' 		=> __('Default Helium Addon Weight', 'product-helium-addon-for-woocommerce'),
+				'desc' 		=> __('The weight of helium addon unless overridden per-product.', 'product-helium-addon-for-woocommerce'),
+				'id' 		=> 'product_helium_addon_weight',
+				'type' 		=> 'text',
+				'desc_tip'  => true,
+			),
+			array(
 				'name' 		=> __('Helium Addon Message', 'product-helium-addon-for-woocommerce'),
 				'id' 		=> 'product_helium_addon_message',
 				'desc' 		=> __('Note: <code>{price}</code> will be replaced with the helium addon cost.', 'product-helium-addon-for-woocommerce'),
