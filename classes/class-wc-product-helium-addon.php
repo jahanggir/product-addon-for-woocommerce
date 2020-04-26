@@ -431,10 +431,17 @@ class WC_Product_Helium_Addon
 	{
 		$_is_helium_addable = !empty($_POST['_is_helium_addable']) ? 'yes' : 'no';
 		$_helium_addon_cost    = !empty($_POST['_helium_addon_cost']) ? wc_clean($_POST['_helium_addon_cost']) : '';
-		$_helium_addon_cost	= str_replace(',', '.', $_helium_addon_cost);
+		$_helium_addon_cost    = str_replace(',', '.', $_helium_addon_cost);
+
+		// Save helium weight 
+		$_helium_addon_weight    = !empty($_POST['_helium_addon_weight']) ? wc_clean($_POST['_helium_addon_weight']) : '';
+
+		// uncomment to use , instead of . 
+		// $_helium_addon_weight	 = str_replace(',', '.', $_helium_addon_weight);
 
 		update_post_meta($post_id, '_is_helium_addable', $_is_helium_addable);
 		update_post_meta($post_id, '_helium_addon_cost', $_helium_addon_cost);
+		update_post_meta($post_id, '_helium_addon_weight', $_helium_addon_weight);
 	}
 
 	/**
