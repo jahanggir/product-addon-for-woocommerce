@@ -278,8 +278,10 @@ class WC_Product_Helium_Addon
 		$product = wc_get_product($values['variation_id'] ? $values['variation_id'] : $values['product_id']);
 
 		$cart_item['data']->set_price($product->get_price() + $this->get_price_in_currency($cost));
-		// set weiight 500g
-		$cart_item['data']->set_weight(500);
+
+		// set weight
+		$cart_item['data']->set_weight($product->get_price() + $weight);
+
 		return $cart_item;
 	}
 
