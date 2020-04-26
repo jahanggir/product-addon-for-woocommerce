@@ -10,7 +10,6 @@
  * Requires at least: 5
  * Tested up to: 5.4
  * Text Domain: product-helium-addon-for-woocommerce
- * Domain Path: /languages/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Original Author: mikejolley, tabrisrp

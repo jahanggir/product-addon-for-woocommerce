@@ -3,8 +3,8 @@ Contributors: jahanggir-jaman
 Original Contributors: mikejolley, tabrisrp
 Tags: woocommerce, product, helium addon
 Requires at least: 3.5
-Tested up to: 5.4
-Stable tag: 2
+Tested up to: 5.3
+Stable tag: 2.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,7 +31,7 @@ The plugin is compatible with Aelia Currency Switcher and WooCommerce Currency C
 1. The customizable helium message and checkbox
 
 == Changelog ==
-= 2.0 =
+= 2.0.0 =
 * ----------------------
 * ----------------------
 
