@@ -408,9 +408,12 @@ class WC_Product_Helium_Addon
 			jQuery('input#_is_helium_addable').change(function(){
 
 				jQuery('._helium_addon_cost_field').hide();
+				jQuery('._helium_addon_weight_field').hide();
 
 				if ( jQuery('#_is_helium_addable').is(':checked') ) {
 					jQuery('._helium_addon_cost_field').show();
+					jQuery('._helium_addon_weight_field').show();
+
 				}
 
 			}).change();
