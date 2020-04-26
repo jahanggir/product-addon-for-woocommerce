@@ -200,8 +200,13 @@ class WC_Product_Helium_Addon
 
 			$cost = get_post_meta($post->ID, '_helium_addon_cost', true);
 
+			// helium weight from product
+			$weight = get_post_meta($post->ID, '_helium_addon_weight', true);
+
 			if ('' === $cost) {
 				$cost = $this->helium_addon_cost;
+				// global helium addon weight
+				$weight = $this->helium_addon_weight;
 			}
 
 			$price_text = $cost > 0 ? wc_price($this->get_price_in_currency($cost)) : __('free', 'product-helium-addon-for-woocommerce');
