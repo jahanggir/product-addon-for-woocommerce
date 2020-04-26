@@ -309,7 +309,7 @@ class WC_Product_Helium_Addon
 	}
 
 	/**
-	 * Adjust price after adding to cart
+	 * Adjust price and weight after adding to cart
 	 *
 	 * @access public
 	 * @param mixed $cart_item array of cart item data.
@@ -323,15 +323,24 @@ class WC_Product_Helium_Addon
 
 		$cost = get_post_meta($cart_item['product_id'], '_helium_addon_cost', true);
 
+		// Get weight from session
+		$weight = get_post_meta($cart_item['product_id'], '_helium_addon_weight', true);
+
 		if ('' === $cost) {
 			$cost = $this->helium_addon_cost;
+		}
+
+		// if unset on product level get from global 
+		if ('' === $weight) {
+			$weight = $this->helium_addon_weight;
 		}
 
 		$product = wc_get_product($cart_item['variation_id'] ? $cart_item['variation_id'] : $cart_item['product_id']);
 
 		$cart_item['data']->set_price($product->get_price() + $this->get_price_in_currency($cost));
-		// set weiight 500g
-		$cart_item['data']->set_weight(500);
+
+		// set weight
+		$cart_item['data']->set_weight($product->get_price() + $weight);
 
 		return $cart_item;
 	}
