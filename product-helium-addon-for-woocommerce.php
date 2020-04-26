@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Add Helium Addon
  * Plugin URI: https://jaman.xyz
@@ -12,19 +13,19 @@
  * Domain Path: /languages/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Original Author: Mike Jolley
+ * Original Author: mikejolley, tabrisrp
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
-if ( ! class_exists( 'WC_Product_Helium_Addon' ) ) :
-	define( 'WC_Product_Helium_Addon_PATH', realpath( plugin_dir_path( __FILE__ ) ) );
+if (!class_exists('WC_Product_Helium_Addon')) :
+	define('WC_Product_Helium_Addon_PATH', realpath(plugin_dir_path(__FILE__)));
 
-	require( WC_Product_Helium_Addon_PATH . '/classes/class-wc-product-helium-addon.php' );
+	require(WC_Product_Helium_Addon_PATH . '/classes/class-wc-product-helium-addon.php');
 
-	register_activation_hook( __FILE__, array( 'WC_Product_Helium_Addon', 'install' ) );
-	add_action( 'plugins_loaded', array( 'WC_Product_Helium_Addon', 'init' ) );
+	register_activation_hook(__FILE__, array('WC_Product_Helium_Addon', 'install'));
+	add_action('plugins_loaded', array('WC_Product_Helium_Addon', 'init'));
 
 endif;
