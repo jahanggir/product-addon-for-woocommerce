@@ -118,7 +118,7 @@ class WC_Product_Helium_Addon
 		// Add option to set helium weight globally
 		add_option('product_helium_addon_weight', '0');
 		// Translators: %s is the price for the helium addon.
-		add_option('product_helium_addon_message', sprintf(__('Add helium for %s?', 'product-helium-addon-for-woocommerce'), '{price}'));
+		add_option('product_helium_addon_message', sprintf(__('Add helium for extra %s ? Final weight will be %s', 'product-helium-addon-for-woocommerce'), '{price}', '{price}'));
 	}
 
 	/**
