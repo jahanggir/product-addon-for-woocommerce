@@ -205,6 +205,9 @@ class WC_Product_Helium_Addon
 
 			if ('' === $cost) {
 				$cost = $this->helium_addon_cost;
+			}
+
+			if ('' === $weight) {
 				// global helium addon weight
 				$weight = $this->helium_addon_weight;
 			}
@@ -260,8 +263,16 @@ class WC_Product_Helium_Addon
 
 		$cost = get_post_meta($cart_item['product_id'], '_helium_addon_cost', true);
 
+		// Get weight from session
+		$weight = get_post_meta($cart_item['product_id'], '_helium_addon_weight', true);
+
 		if ('' === $cost) {
 			$cost = $this->helium_addon_cost;
+		}
+
+		// if unset on product level get from global 
+		if ('' === $weight) {
+			$weight = $this->helium_addon_weight;
 		}
 
 		$product = wc_get_product($values['variation_id'] ? $values['variation_id'] : $values['product_id']);
