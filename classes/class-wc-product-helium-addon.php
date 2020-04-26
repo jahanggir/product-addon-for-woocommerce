@@ -396,6 +396,14 @@ class WC_Product_Helium_Addon
 			'description' => __('Override the default cost by inputting a cost here.', 'product-helium-addon-for-woocommerce'),
 		));
 
+		woocommerce_wp_text_input(array(
+			'id'          => '_helium_addon_weight',
+			'label'       => __('Helium addon weight', 'product-helium-addon-for-woocommerce'),
+			'placeholder' => $this->helium_addon_weight,
+			'desc_tip'    => true,
+			'description' => __('Override the default weight by inputting a cost weight.', 'product-helium-addon-for-woocommerce'),
+		));
+
 		wc_enqueue_js("
 			jQuery('input#_is_helium_addable').change(function(){
 
