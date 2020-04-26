@@ -45,6 +45,14 @@ class WC_Product_Helium_Addon
 	public $helium_addon_cost;
 
 	/**
+	 * Plugin option to set weight.
+	 *
+	 * @since 2.0.0
+	 * @var int $helium_addon_weight plugin option to set price.
+	 */
+	public $helium_addon_weight;
+
+	/**
 	 * Plugin option to display text next to checkbox for activating the helium addon.
 	 *
 	 * @since 1.0.0
@@ -63,6 +71,7 @@ class WC_Product_Helium_Addon
 	{
 		$this->helium_addon_enabled         = get_option('product_helium_addon_enabled');
 		$this->helium_addon_cost            = get_option('product_helium_addon_cost', 0);
+		$this->helium_addon_weight          = get_option('product_helium_addon_weight', 0);
 		$this->product_helium_addon_message = get_option('product_helium_addon_message');
 	}
 
@@ -106,6 +115,8 @@ class WC_Product_Helium_Addon
 	{
 		add_option('product_helium_addon_enabled', false);
 		add_option('product_helium_addon_cost', '0');
+		// Add option to set helium weight globally
+		add_option('product_helium_addon_weight', '0');
 		// Translators: %s is the price for the helium addon.
 		add_option('product_helium_addon_message', sprintf(__('Add helium for %s?', 'product-helium-addon-for-woocommerce'), '{price}'));
 	}
