@@ -70,7 +70,8 @@ class WC_Product_Helium_Addon
 	public function __construct()
 	{
 		$this->helium_addon_enabled         = get_option('product_helium_addon_enabled');
-		$this->helium_addon_cost            = get_option('product_helium_addon_cost', 0);
+		//$this->helium_addon_cost            = get_option('product_helium_addon_cost', 0);
+		$this->helium_addon_cost            = get_option('product_helium_addon_cost');
 		$this->helium_addon_weight          = get_option('product_helium_addon_weight');
 		$this->product_helium_addon_message = get_option('product_helium_addon_message');
 	}
@@ -113,6 +114,7 @@ class WC_Product_Helium_Addon
 	 */
 	public static function install()
 	{
+		// add_option('product_helium_addon_enabled', false);
 		add_option('product_helium_addon_enabled', false);
 		add_option('product_helium_addon_cost', '0');
 		// Add option to set helium weight globally
