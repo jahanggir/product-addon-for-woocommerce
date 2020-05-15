@@ -47,18 +47,5 @@ The plugin is compatible with Aelia Currency Switcher and WooCommerce Currency C
 = 1.2 =
 * WC 2.5 & WP 4.5 compatibility
 
-= 1.1.0 =
-* WC 2.2 compatibility.
-* Changed 'helium addon Message' option to include only the label. Markup can be changed via a template file.
-* Updated textdomain to woocommerce-product-helium-add.
-* Japanese language.
-* Danish language.
-* Brazilian Portuguese language.
-* Included POT file.
-
-= 1.0.1 =
-* Fix helium addon price overrides
-* German language
-
 = 1.0.0 =
 * Initial release!
