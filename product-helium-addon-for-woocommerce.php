@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Add Helium Addon
  * Plugin URI: https://jaman.xyz
- * Description: Add a checkbox to your products to charge extra fee for heliums
+ * Description: Add a checkbox to your products to charge extra fee for helium items
  * Version: 2.0.0
  * Author: Jahanggir Jaman
  * Author URI: https://jaman.xyz
